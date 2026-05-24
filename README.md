@@ -76,7 +76,7 @@ QR-Attendance-System/
 ### 1️⃣ Clone the Repository
 
 
-git clone https://github.com/YOUR_USERNAME/QR-Attendance-System.git
+git clone https://github.com/Mounika-Tapila/QR-Attendance-System.git
 cd QR-Attendance-System
 
 
