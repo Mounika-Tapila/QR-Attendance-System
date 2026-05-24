@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Admin Panel</title>
+    <div class="footer">
+      © <span class="text">Created by</span>
+      <span class="name">Tapila</span>
+    </div>
+
+    <style>
+      body {
+        font-family: Arial;
+        background: #f4f6f9;
+        text-align: center;
+      }
+
+      .container {
+        margin-top: 80px;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      .card {
+        display: inline-block;
+        background: white;
+        padding: 30px;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 260px;
+      }
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        background: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #0056b3;
+      }
+
+      .top-right {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      .top-right button {
+        margin-left: 10px;
+      }
+
+      .back-btn {
+        background: green !important;
+      }
+
+      .logout-btn {
+        background: red !important;
+      }
+
+      input {
+        padding: 8px;
+        width: 90%;
+        margin-bottom: 10px;
+      }
+      .footer {
+        position: fixed;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 16px; /* same size */
+        color: #555;
+      }
+
+      .text {
+        font-family: Arial, sans-serif;
+      }
+
+      .name {
+        font-family: "Courier New", monospace;
+        font-weight: bold;
+      }
+      .name {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        color: #007bff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 🔥 TOP RIGHT BUTTONS -->
+    <div class="top-right">
+      <a href="/dashboard">
+        <button class="back-btn">Back</button>
+      </a>
+
+      <a href="/logout">
+        <button class="logout-btn">Logout</button>
+      </a>
+    </div>
+
+    <div class="container">
+      <h1>👨‍🏫 Admin Panel</h1>
+
+      <!-- ➕ REGISTRATION -->
+      <div class="card">
+        <h3>New Registration</h3>
+        <a href="/register"><button>Register</button></a>
+      </div>
+
+      <!-- 📊 VIEW ATTENDANCE -->
+      <div class="card">
+        <h3>Attendance Sheet</h3>
+        <a href="/attendance"><button>View</button></a>
+      </div>
+
+      <!-- 📷 GENERATE QR -->
+      <div class="card">
+        <h3>Generate QR</h3>
+
+        <form action="/generate_qr" method="POST">
+          <input type="text" name="name" placeholder="Student Name" required />
+
+          <input
+            type="text"
+            name="student_id"
+            placeholder="Student ID"
+            required
+          />
+
+          <button type="submit">Generate</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
